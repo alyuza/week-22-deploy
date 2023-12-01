@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "deployment-fsse-june-23",
+    "deployment-fsse-june-23": "deployment-fsse-june-23"
+  },
+  "targets": {},
+  "etags": {}
+}

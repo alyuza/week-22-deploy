@@ -1,0 +1,73 @@
+[debug] [2023-12-01T18:18:22.000Z] ----------------------------------------------------------------------
+[debug] [2023-12-01T18:18:22.001Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\alyuz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2023-12-01T18:18:22.002Z] CLI Version:   12.9.1
+[debug] [2023-12-01T18:18:22.002Z] Platform:      win32
+[debug] [2023-12-01T18:18:22.002Z] Node Version:  v18.17.0
+[debug] [2023-12-01T18:18:22.003Z] Time:          Sat Dec 02 2023 01:18:22 GMT+0700 (Western Indonesia Time)
+[debug] [2023-12-01T18:18:22.003Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-01T18:18:22.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-01T18:18:22.060Z] > authorizing via signed-in user (alyuza.sat@gmail.com)
+[debug] [2023-12-01T18:18:22.060Z] [iam] checking project deployment-fsse-june-23 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-12-01T18:18:22.061Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/deployment-fsse-june-23:testIamPermissions [none]
+[debug] [2023-12-01T18:18:22.061Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/deployment-fsse-june-23:testIamPermissions x-goog-quota-user=projects/deployment-fsse-june-23
+[debug] [2023-12-01T18:18:22.062Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/deployment-fsse-june-23:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-12-01T18:18:23.172Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/deployment-fsse-june-23:testIamPermissions 200
+[debug] [2023-12-01T18:18:23.172Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/deployment-fsse-june-23:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-12-01T18:18:23.172Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/deployment-fsse-june-23/serviceAccounts/deployment-fsse-june-23@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-12-01T18:18:23.172Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/deployment-fsse-june-23/serviceAccounts/deployment-fsse-june-23@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-01T18:18:23.520Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/deployment-fsse-june-23/serviceAccounts/deployment-fsse-june-23@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-12-01T18:18:23.520Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/deployment-fsse-june-23/serviceAccounts/deployment-fsse-june-23@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'deployment-fsse-june-23'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-12-01T18:18:23.523Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23 [none]
+[debug] [2023-12-01T18:18:24.191Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23 200
+[debug] [2023-12-01T18:18:24.192Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23 {"projectId":"deployment-fsse-june-23","projectNumber":"22359952577","displayName":"Deployment-FSSE June 23","name":"projects/deployment-fsse-june-23","resources":{"hostingSite":"deployment-fsse-june-23"},"state":"ACTIVE","etag":"1_d749931d-75e5-4021-8a44-4ac2de86e828"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-12-01T18:18:24.194Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-12-01T18:18:24.194Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/deployment-fsse-june-23
+[debug] [2023-12-01T18:18:24.195Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-12-01T18:18:24.196Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/deployment-fsse-june-23
+[debug] [2023-12-01T18:18:24.196Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudbuild.googleapis.com [none]
+[debug] [2023-12-01T18:18:24.197Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudbuild.googleapis.com x-goog-quota-user=projects/deployment-fsse-june-23
+[debug] [2023-12-01T18:18:24.197Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/artifactregistry.googleapis.com [none]
+[debug] [2023-12-01T18:18:24.197Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/artifactregistry.googleapis.com x-goog-quota-user=projects/deployment-fsse-june-23
+[debug] [2023-12-01T18:18:25.669Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudbuild.googleapis.com 200
+[debug] [2023-12-01T18:18:25.670Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-12-01T18:18:25.696Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/artifactregistry.googleapis.com 200
+[debug] [2023-12-01T18:18:25.696Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-12-01T18:18:25.697Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudfunctions.googleapis.com 200
+[debug] [2023-12-01T18:18:25.697Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-12-01T18:18:25.701Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/runtimeconfig.googleapis.com 200
+[debug] [2023-12-01T18:18:25.702Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/deployment-fsse-june-23/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-12-01T18:18:25.702Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23/adminSdkConfig [none]
+[debug] [2023-12-01T18:18:26.050Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23/adminSdkConfig 200
+[debug] [2023-12-01T18:18:26.050Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/deployment-fsse-june-23/adminSdkConfig {"projectId":"deployment-fsse-june-23","storageBucket":"deployment-fsse-june-23.appspot.com"}
+[debug] [2023-12-01T18:18:26.050Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deployment-fsse-june-23/configs [none]
+[debug] [2023-12-01T18:18:26.650Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deployment-fsse-june-23/configs 200
+[debug] [2023-12-01T18:18:26.650Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/deployment-fsse-june-23/configs {}
+[debug] [2023-12-01T18:18:26.651Z] Customer code is not Node
+[debug] [2023-12-01T18:18:26.651Z] Validating python source
+[debug] [2023-12-01T18:18:26.652Z] Building python source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2023-12-01T18:18:26.652Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-01T18:18:26.660Z] Running command with virtualenv: command="C:\Users\alyuz\Projects\DEPLOY\week-22-alyuza\backend\src\venv\Scripts\activate.bat", args=["","&&","python.exe","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2023-12-01T18:18:26.785Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[debug] [2023-12-01T18:18:26.893Z] Error: spawn "C:\Users\alyuz\Projects\DEPLOY\week-22-alyuza\backend\src\venv\Scripts\activate.bat" ENOENT
+    at notFoundError (C:\Users\alyuz\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:6:26)
+    at verifyENOENT (C:\Users\alyuz\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:40:16)
+    at cp.emit (C:\Users\alyuz\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\lib\enoent.js:27:25)
+    at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+[error] 
+[error] Error: An unexpected error has occurred.
