@@ -1,8 +1,8 @@
 {
   "functions": [
     {
-      "source": "src",
-      "codebase": "default",
+      "source": "alyuza",
+      "codebase": "alyuza",
       "ignore": [
         "venv",
         ".git",
